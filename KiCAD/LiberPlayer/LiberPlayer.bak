@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:LiberPlayer-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "LiberPlayer"
 Date "2018-10-05"
 Rev "1.0"
@@ -30,5 +31,15 @@ S 3100 5200 1200 1600
 U 5BB77206
 F0 "RS232C Interface" 50
 F1 "rs232c.sch" 50
+$EndSheet
+$Sheet
+S 1600 900  950  750 
+U 5BBA63F4
+F0 "Video Front-End" 50
+F1 "VideoFrontEnd.sch" 50
+F2 "VideoIn_Red" I R 2550 1050 50 
+F3 "VideoIn_Green" I R 2550 1200 50 
+F4 "VideoIn_Blue" I R 2550 1350 50 
+F5 "CVBS_Sync" I R 2550 1500 50 
 $EndSheet
 $EndSCHEMATC
