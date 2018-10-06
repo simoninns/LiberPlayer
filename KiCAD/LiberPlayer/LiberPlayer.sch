@@ -40,7 +40,7 @@ F19 "I2C_SDA" B R 3950 1800 50
 F20 "FSS" B R 3950 3100 50 
 $EndSheet
 $Sheet
-S 2950 4600 1000 1850
+S 2950 4600 1000 2100
 U 5BB771D8
 F0 "SCSI-1 Interface" 50
 F1 "scsi1.sch" 50
@@ -59,8 +59,10 @@ F13 "~SEL" B R 3950 5850 50
 F14 "~ATN" O R 3950 5950 50 
 F15 "~ACK" O R 3950 6050 50 
 F16 "~MSG" I R 3950 6150 50 
-F17 "~REQ" I R 3950 6250 50 
-F18 "~I~O" I R 3950 6350 50 
+F17 "~REQ" I R 3950 6350 50 
+F18 "~I~O" I R 3950 6450 50 
+F19 "SCSI_OE" I R 3950 6600 50 
+F20 "~C~D" I R 3950 6250 50 
 $EndSheet
 $Sheet
 S 2950 3650 1000 550 
@@ -89,10 +91,10 @@ F2 "~RESET" O R 2150 2450 50
 F3 "~Enabled" I R 2150 2550 50 
 $EndSheet
 $Comp
-L DE10-Nano:GPIO_0 JP?
+L DE10-Nano:GPIO_0 JP101
 U 1 1 5BB91216
 P 8400 2650
-F 0 "JP?" H 8400 3865 50  0000 C CNN
+F 0 "JP101" H 8400 3865 50  0000 C CNN
 F 1 "GPIO_0" H 8400 3774 50  0000 C CNN
 F 2 "" H 8400 2650 50  0001 C CNN
 F 3 "" H 8400 2650 50  0001 C CNN
@@ -112,48 +114,42 @@ F4 "VideoIn_Blue" O R 2150 1900 50
 F5 "CVBS_Sync" O R 2150 2000 50 
 $EndSheet
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0102
 U 1 1 5BD8E15E
-P 7700 1500
-F 0 "#PWR?" H 7700 1350 50  0001 C CNN
-F 1 "+5V" H 7715 1673 50  0000 C CNN
-F 2 "" H 7700 1500 50  0001 C CNN
-F 3 "" H 7700 1500 50  0001 C CNN
-	1    7700 1500
+P 7700 1250
+F 0 "#PWR0102" H 7700 1100 50  0001 C CNN
+F 1 "+5V" H 7715 1423 50  0000 C CNN
+F 2 "" H 7700 1250 50  0001 C CNN
+F 3 "" H 7700 1250 50  0001 C CNN
+	1    7700 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0101
 U 1 1 5BD8E189
-P 7450 1500
-F 0 "#PWR?" H 7450 1350 50  0001 C CNN
-F 1 "+3V3" H 7465 1673 50  0000 C CNN
-F 2 "" H 7450 1500 50  0001 C CNN
-F 3 "" H 7450 1500 50  0001 C CNN
-	1    7450 1500
+P 7450 1250
+F 0 "#PWR0101" H 7450 1100 50  0001 C CNN
+F 1 "+3V3" H 7465 1423 50  0000 C CNN
+F 2 "" H 7450 1250 50  0001 C CNN
+F 3 "" H 7450 1250 50  0001 C CNN
+	1    7450 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 5BD8E1B4
-P 9200 3800
-F 0 "#PWR?" H 9200 3550 50  0001 C CNN
-F 1 "GND" H 9205 3627 50  0000 C CNN
-F 2 "" H 9200 3800 50  0001 C CNN
-F 3 "" H 9200 3800 50  0001 C CNN
-	1    9200 3800
+P 9200 4000
+F 0 "#PWR0103" H 9200 3750 50  0001 C CNN
+F 1 "GND" H 9205 3827 50  0000 C CNN
+F 2 "" H 9200 4000 50  0001 C CNN
+F 3 "" H 9200 4000 50  0001 C CNN
+	1    9200 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7800 2200 7700 2200
 Wire Wire Line
-	7700 2200 7700 1500
-Wire Wire Line
 	7800 3100 7450 3100
-Wire Wire Line
-	7450 3100 7450 1500
-Wire Wire Line
-	9200 3800 9200 3100
 Wire Wire Line
 	9200 2200 9000 2200
 Wire Wire Line
@@ -343,9 +339,9 @@ Text GLabel 4750 6050 2    50   Output ~ 0
 SCSI_~ACK
 Text GLabel 4200 6150 2    50   Input ~ 0
 SCSI_~MSG
-Text GLabel 4750 6250 2    50   Input ~ 0
-SCSI_~REQ
 Text GLabel 4200 6350 2    50   Input ~ 0
+SCSI_~REQ
+Text GLabel 4750 6450 2    50   Input ~ 0
 SCSI_~I~O
 Wire Wire Line
 	3950 4700 4200 4700
@@ -377,10 +373,6 @@ Wire Wire Line
 	3950 6050 4750 6050
 Wire Wire Line
 	3950 6150 4200 6150
-Wire Wire Line
-	3950 6250 4750 6250
-Wire Wire Line
-	3950 6350 4200 6350
 Text GLabel 10000 2700 2    50   BiDi ~ 0
 SCSI_~DB0
 Text GLabel 6750 2800 0    50   BiDi ~ 0
@@ -397,23 +389,21 @@ Text GLabel 9500 3000 2    50   BiDi ~ 0
 SCSI_~DB6
 Text GLabel 7300 3200 0    50   BiDi ~ 0
 SCSI_~DB7
-Text GLabel 10000 3200 2    50   BiDi ~ 0
+Text GLabel 8200 4500 0    50   BiDi ~ 0
 SCSI_~PARITY
-Text GLabel 6750 3300 0    50   BiDi ~ 0
+Text GLabel 9500 3200 2    50   BiDi ~ 0
 SCSI_~BSY
-Text GLabel 9500 3300 2    50   BiDi ~ 0
+Text GLabel 6750 3300 0    50   BiDi ~ 0
 SCSI_~RST
-Text GLabel 7300 3400 0    50   BiDi ~ 0
+Text GLabel 10000 3300 2    50   BiDi ~ 0
 SCSI_~SEL
-Text GLabel 10000 3400 2    50   Output ~ 0
+Text GLabel 8200 4700 0    50   Output ~ 0
 SCSI_~ATN
-Text GLabel 6750 3500 0    50   Output ~ 0
-SCSI_~ACK
-Text GLabel 9500 3500 2    50   Input ~ 0
+Text GLabel 9500 3400 2    50   Input ~ 0
 SCSI_~MSG
-Text GLabel 7300 3600 0    50   Input ~ 0
+Text GLabel 10000 3500 2    50   Input ~ 0
 SCSI_~REQ
-Text GLabel 10000 3600 2    50   Input ~ 0
+Text GLabel 7300 3600 0    50   Input ~ 0
 SCSI_~I~O
 Wire Wire Line
 	10000 2700 9000 2700
@@ -432,21 +422,91 @@ Wire Wire Line
 Wire Wire Line
 	7300 3200 7800 3200
 Wire Wire Line
-	9000 3200 10000 3200
+	7700 1250 7700 2200
+Wire Wire Line
+	7450 1250 7450 3100
+Wire Wire Line
+	9200 3100 9200 3950
+Text GLabel 4750 6250 2    50   Input ~ 0
+SCSI_~C~D
+Wire Wire Line
+	4750 6250 3950 6250
+Wire Wire Line
+	4200 6350 3950 6350
+Wire Wire Line
+	4750 6450 3950 6450
+Text GLabel 4200 6600 2    50   Input ~ 0
+SCSI_OE
+Wire Wire Line
+	4200 6600 3950 6600
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C1821EA
+P 9450 3900
+F 0 "#FLG0101" H 9450 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 9450 4074 50  0000 C CNN
+F 2 "" H 9450 3900 50  0001 C CNN
+F 3 "~" H 9450 3900 50  0001 C CNN
+	1    9450 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3900 9450 3950
+Wire Wire Line
+	9450 3950 9200 3950
+Connection ~ 9200 3950
+Wire Wire Line
+	9200 3950 9200 4000
+Text GLabel 6750 3500 0    50   Input ~ 0
+SCSI_~C~D
+Text GLabel 9500 3600 2    50   Input ~ 0
+SCSI_OE
+Text GLabel 7300 3400 0    50   Output ~ 0
+SCSI_~ACK
+Wire Wire Line
+	9500 3200 9000 3200
+Wire Wire Line
+	9000 3300 10000 3300
+Wire Wire Line
+	9500 3400 9000 3400
+Wire Wire Line
+	10000 3500 9000 3500
+Wire Wire Line
+	9500 3600 9000 3600
 Wire Wire Line
 	6750 3300 7800 3300
 Wire Wire Line
-	7300 3400 7800 3400
-Wire Wire Line
-	9000 3300 9500 3300
-Wire Wire Line
-	10000 3400 9000 3400
-Wire Wire Line
-	9500 3500 9000 3500
-Wire Wire Line
-	10000 3600 9000 3600
-Wire Wire Line
-	7800 3600 7300 3600
+	7800 3400 7300 3400
 Wire Wire Line
 	6750 3500 7800 3500
+Wire Wire Line
+	7800 3600 7300 3600
+$Comp
+L Connector:TestPoint TP101
+U 1 1 5C1A6558
+P 8600 4500
+F 0 "TP101" V 8554 4688 50  0000 L CNN
+F 1 "TestPoint" V 8645 4688 50  0000 L CNN
+F 2 "" H 8800 4500 50  0001 C CNN
+F 3 "~" H 8800 4500 50  0001 C CNN
+	1    8600 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP102
+U 1 1 5C1A6599
+P 8600 4700
+F 0 "TP102" V 8554 4888 50  0000 L CNN
+F 1 "TestPoint" V 8645 4888 50  0000 L CNN
+F 2 "" H 8800 4700 50  0001 C CNN
+F 3 "~" H 8800 4700 50  0001 C CNN
+	1    8600 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 4500 8600 4500
+Wire Wire Line
+	8600 4700 8200 4700
+Text Notes 9300 5000 2    50   ~ 0
+Not required for Acorn interface - leaving disconnected\nuntil second DE10 GPIO header is included.
 $EndSCHEMATC
