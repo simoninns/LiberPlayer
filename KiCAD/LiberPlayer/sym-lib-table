@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name LocalSymbolLibrary)(type Legacy)(uri D:/simon/Documents/GitHub/LiberPlayer/KiCAD/LiberPlayer/LocalSymbolLibrary.lib)(options "")(descr ""))
+  (lib (name DE10-Nano)(type Legacy)(uri D:/simon/Documents/GitHub/LiberPlayer/KiCAD/LiberPlayer/DE10-Nano.lib)(options "")(descr ""))
 )

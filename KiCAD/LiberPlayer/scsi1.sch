@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 3 6
 Title "LiberPlayer - SCSI-1 Interface"
 Date "2018-10-05"
 Rev "1.0"

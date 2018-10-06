@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADC
+D DE10-Nano ADC Header
+$ENDCMP
+#
+$CMP GPIO_0
+D DE10-Nano GPIO Header
+$ENDCMP
+#
+$CMP GPIO_1
+D DE10-Nano GPIO Header
+$ENDCMP
+#
+#End Doc Library
