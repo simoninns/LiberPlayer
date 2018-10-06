@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 5 6
 Title "LiberPlayer - Power Supply"
 Date "2018-10-06"
 Rev "1.0"
@@ -282,28 +282,6 @@ Text HLabel 6750 4000 2    50   Output ~ 0
 Wire Wire Line
 	6750 4000 6700 4000
 Connection ~ 6700 4000
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5BBE3D58
-P 7200 3350
-F 0 "#PWR?" H 7200 3200 50  0001 C CNN
-F 1 "+3V3" H 7215 3523 50  0000 C CNN
-F 2 "" H 7200 3350 50  0001 C CNN
-F 3 "" H 7200 3350 50  0001 C CNN
-	1    7200 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR?
-U 1 1 5BBE3D8F
-P 7200 4250
-F 0 "#PWR?" H 7200 4100 50  0001 C CNN
-F 1 "+1V8" H 7215 4423 50  0000 C CNN
-F 2 "" H 7200 4250 50  0001 C CNN
-F 3 "" H 7200 4250 50  0001 C CNN
-	1    7200 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7200 3350 7200 3400
 Connection ~ 7200 3400
@@ -314,4 +292,26 @@ Text HLabel 4900 4000 0    50   Input ~ 0
 ~Enabled
 Wire Wire Line
 	4900 4000 5050 4000
+$Comp
+L LocalSymbolLibrary:+3V3D #PWR?
+U 1 1 5BD7F2EF
+P 7200 3350
+F 0 "#PWR?" H 7200 3200 50  0001 C CNN
+F 1 "+3V3D" H 7215 3523 50  0000 C CNN
+F 2 "" H 7200 3350 50  0001 C CNN
+F 3 "" H 7200 3350 50  0001 C CNN
+	1    7200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LocalSymbolLibrary:+1V8D #PWR?
+U 1 1 5BD7F326
+P 7200 4250
+F 0 "#PWR?" H 7200 4100 50  0001 C CNN
+F 1 "+1V8D" H 7215 4423 50  0000 C CNN
+F 2 "" H 7200 4250 50  0001 C CNN
+F 3 "" H 7200 4250 50  0001 C CNN
+	1    7200 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
