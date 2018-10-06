@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP TPS70151PWP
+D Dual-Output Low Dropout Voltage Regulator with Power-Up Sequencing for Split-Voltage DSP Systems
+$ENDCMP
+#
 #End Doc Library

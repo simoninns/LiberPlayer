@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "LiberPlayer - Video Front-End"
-Date "2018-10-05"
+Date "2018-10-06"
 Rev "1.0"
 Comp "https://www.domesday86.com"
 Comment1 "(c) 2018 Simon Inns"
@@ -774,13 +774,13 @@ Text Notes 5050 2900 2    50   ~ 0
 Blue
 Text Notes 5300 3300 2    50   ~ 0
 CVBS/Sync
-Text HLabel 8300 2050 2    50   Input ~ 0
+Text HLabel 8300 2050 2    50   Output ~ 0
 VideoIn_Red
-Text HLabel 8300 3000 2    50   Input ~ 0
+Text HLabel 8300 3000 2    50   Output ~ 0
 VideoIn_Green
-Text HLabel 8300 3950 2    50   Input ~ 0
+Text HLabel 8300 3950 2    50   Output ~ 0
 VideoIn_Blue
-Text HLabel 8300 4900 2    50   Input ~ 0
+Text HLabel 8300 4900 2    50   Output ~ 0
 CVBS_Sync
 Wire Wire Line
 	8150 4900 8300 4900

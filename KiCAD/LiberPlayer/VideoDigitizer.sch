@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "LiberPlayer - Video Digitizer"
-Date "2018-10-05"
+Date "2018-10-06"
 Rev "1.0"
 Comp "https://www.domesday86.com"
 Comment1 "(c) 2018 Simon Inns"
@@ -14,17 +14,6 @@ Comment2 "License: Attribution-ShareAlike 4.0 International (CC BY-SA 4.)"
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L LocalSymbolLibrary:TVP5146 U?
-U 1 1 5BB802CD
-P 8000 3450
-F 0 "U?" H 7900 3450 50  0000 C CNN
-F 1 "TVP5146" H 8000 3550 50  0000 C CNN
-F 2 "" H 7950 3550 50  0001 C CNN
-F 3 "" H 7950 3550 50  0001 C CNN
-	1    8000 3450
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5BB806D8
@@ -726,10 +715,6 @@ Wire Wire Line
 	6450 4600 5000 4600
 Wire Wire Line
 	4700 4600 4550 4600
-NoConn ~ 9550 4600
-NoConn ~ 6450 4200
-NoConn ~ 6450 3900
-NoConn ~ 6450 4000
 $Comp
 L Device:R R?
 U 1 1 5BC6296A
@@ -788,7 +773,7 @@ Wire Wire Line
 Connection ~ 2300 3400
 Text HLabel 1950 3300 0    50   Input ~ 0
 I2C_SCL
-Text HLabel 1950 3400 0    50   Input ~ 0
+Text HLabel 1950 3400 0    50   BiDi ~ 0
 I2C_SDA
 $Comp
 L Device:R R?
@@ -818,27 +803,27 @@ Wire Wire Line
 	5200 4500 5100 4500
 Wire Wire Line
 	5100 4500 5100 4400
-Text HLabel 9950 3300 2    50   Input ~ 0
+Text HLabel 9950 3300 2    50   Output ~ 0
 Y0
-Text HLabel 9950 3400 2    50   Input ~ 0
+Text HLabel 9950 3400 2    50   Output ~ 0
 Y1
-Text HLabel 9950 3500 2    50   Input ~ 0
+Text HLabel 9950 3500 2    50   Output ~ 0
 Y2
-Text HLabel 9950 3600 2    50   Input ~ 0
+Text HLabel 9950 3600 2    50   Output ~ 0
 Y3
-Text HLabel 9950 3700 2    50   Input ~ 0
+Text HLabel 9950 3700 2    50   Output ~ 0
 Y4
-Text HLabel 9950 3800 2    50   Input ~ 0
+Text HLabel 9950 3800 2    50   Output ~ 0
 Y5
-Text HLabel 9950 3900 2    50   Input ~ 0
+Text HLabel 9950 3900 2    50   Output ~ 0
 Y6
-Text HLabel 9950 4000 2    50   Input ~ 0
+Text HLabel 9950 4000 2    50   Output ~ 0
 Y7
-Text HLabel 9950 4100 2    50   Input ~ 0
+Text HLabel 9950 4100 2    50   Output ~ 0
 Y8
-Text HLabel 9950 4200 2    50   Input ~ 0
+Text HLabel 9950 4200 2    50   Output ~ 0
 Y9
-Text HLabel 9950 4400 2    50   Input ~ 0
+Text HLabel 9950 4400 2    50   Output ~ 0
 DATACLK
 Wire Wire Line
 	9550 3300 9950 3300
@@ -870,26 +855,26 @@ Connection ~ 9150 5650
 $Comp
 L Device:R R?
 U 1 1 5BD44AA7
-P 6150 5000
-F 0 "R?" H 6080 4954 50  0000 R CNN
-F 1 "2K2" H 6080 5045 50  0000 R CNN
-F 2 "" V 6080 5000 50  0001 C CNN
-F 3 "~" H 6150 5000 50  0001 C CNN
-	1    6150 5000
+P 6050 5000
+F 0 "R?" H 5980 4954 50  0000 R CNN
+F 1 "2K2" H 5980 5045 50  0000 R CNN
+F 2 "" V 5980 5000 50  0001 C CNN
+F 3 "~" H 6050 5000 50  0001 C CNN
+	1    6050 5000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6450 4100 6150 4100
+	6450 4100 6050 4100
 Wire Wire Line
-	6150 4100 6150 4850
+	6050 4100 6050 4850
 Wire Wire Line
-	6150 5150 6150 5650
+	6050 5150 6050 5650
 Wire Wire Line
-	6150 5650 6850 5650
-Text HLabel 5900 4700 0    50   Input ~ 0
-RESETB
+	6050 5650 6850 5650
+Text HLabel 6400 4700 0    50   Input ~ 0
+~RESET
 Wire Wire Line
-	5900 4700 6450 4700
+	6400 4700 6450 4700
 $Comp
 L power:GND #PWR?
 U 1 1 5BD961D3
@@ -903,19 +888,10 @@ F 3 "" H 4550 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4550 4700 4550 4600
-Text HLabel 5900 4400 0    50   Input ~ 0
+Text HLabel 6400 4400 0    50   BiDi ~ 0
 FSS
 Wire Wire Line
-	5900 4400 6450 4400
-NoConn ~ 9550 2200
-NoConn ~ 9550 2400
-NoConn ~ 9550 2500
-NoConn ~ 9550 2600
-NoConn ~ 9550 2700
-NoConn ~ 9550 2800
-NoConn ~ 9550 2900
-NoConn ~ 9550 3000
-NoConn ~ 9550 3100
+	6400 4400 6450 4400
 $Comp
 L Device:C C?
 U 1 1 5BE82D5D
@@ -1062,6 +1038,225 @@ Wire Wire Line
 	5100 2900 6450 2900
 Wire Wire Line
 	5100 2900 5100 3650
+$Comp
+L Device:R R?
+U 1 1 5BBF8862
+P 9650 5000
+F 0 "R?" H 9580 4954 50  0000 R CNN
+F 1 "2K2" H 9580 5045 50  0000 R CNN
+F 2 "" V 9580 5000 50  0001 C CNN
+F 3 "~" H 9650 5000 50  0001 C CNN
+	1    9650 5000
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	9650 2300 9650 5650
+	9650 5650 9650 5150
+Wire Wire Line
+	9650 4850 9650 2300
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC0FDD3
+P 10000 2200
+F 0 "TP?" V 9954 2388 50  0000 L CNN
+F 1 "C0" V 10045 2388 50  0000 L CNN
+F 2 "" H 10200 2200 50  0001 C CNN
+F 3 "~" H 10200 2200 50  0001 C CNN
+	1    10000 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC0FE72
+P 10450 2300
+F 0 "TP?" V 10404 2488 50  0000 L CNN
+F 1 "C1" V 10495 2488 50  0000 L CNN
+F 2 "" H 10650 2300 50  0001 C CNN
+F 3 "~" H 10650 2300 50  0001 C CNN
+	1    10450 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC27585
+P 10000 2400
+F 0 "TP?" V 9954 2588 50  0000 L CNN
+F 1 "C2" V 10045 2588 50  0000 L CNN
+F 2 "" H 10200 2400 50  0001 C CNN
+F 3 "~" H 10200 2400 50  0001 C CNN
+	1    10000 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC2758C
+P 10450 2500
+F 0 "TP?" V 10404 2688 50  0000 L CNN
+F 1 "C3" V 10495 2688 50  0000 L CNN
+F 2 "" H 10650 2500 50  0001 C CNN
+F 3 "~" H 10650 2500 50  0001 C CNN
+	1    10450 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC330BE
+P 10000 2600
+F 0 "TP?" V 9954 2788 50  0000 L CNN
+F 1 "C4" V 10045 2788 50  0000 L CNN
+F 2 "" H 10200 2600 50  0001 C CNN
+F 3 "~" H 10200 2600 50  0001 C CNN
+	1    10000 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC330C4
+P 10450 2700
+F 0 "TP?" V 10404 2888 50  0000 L CNN
+F 1 "C5" V 10495 2888 50  0000 L CNN
+F 2 "" H 10650 2700 50  0001 C CNN
+F 3 "~" H 10650 2700 50  0001 C CNN
+	1    10450 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC330CA
+P 10000 2800
+F 0 "TP?" V 9954 2988 50  0000 L CNN
+F 1 "C6" V 10045 2988 50  0000 L CNN
+F 2 "" H 10200 2800 50  0001 C CNN
+F 3 "~" H 10200 2800 50  0001 C CNN
+	1    10000 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC330D0
+P 10450 2900
+F 0 "TP?" V 10404 3088 50  0000 L CNN
+F 1 "C7" V 10495 3088 50  0000 L CNN
+F 2 "" H 10650 2900 50  0001 C CNN
+F 3 "~" H 10650 2900 50  0001 C CNN
+	1    10450 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC3EBCF
+P 10000 3000
+F 0 "TP?" V 9954 3188 50  0000 L CNN
+F 1 "C8" V 10045 3188 50  0000 L CNN
+F 2 "" H 10200 3000 50  0001 C CNN
+F 3 "~" H 10200 3000 50  0001 C CNN
+	1    10000 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BC3EBD5
+P 10450 3100
+F 0 "TP?" V 10404 3288 50  0000 L CNN
+F 1 "C9" V 10495 3288 50  0000 L CNN
+F 2 "" H 10650 3100 50  0001 C CNN
+F 3 "~" H 10650 3100 50  0001 C CNN
+	1    10450 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L LocalSymbolLibrary:TVP5146 U?
+U 1 1 5BB802CD
+P 8000 3450
+F 0 "U?" H 7900 3450 50  0000 C CNN
+F 1 "TVP5146" H 8000 3550 50  0000 C CNN
+F 2 "" H 7950 3550 50  0001 C CNN
+F 3 "" H 7950 3550 50  0001 C CNN
+	1    8000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2200 9550 2200
+Wire Wire Line
+	10450 2300 9650 2300
+Connection ~ 9650 2300
+Wire Wire Line
+	9550 2400 10000 2400
+Wire Wire Line
+	9550 2500 10450 2500
+Wire Wire Line
+	9550 2600 10000 2600
+Wire Wire Line
+	10450 2700 9550 2700
+Wire Wire Line
+	9550 2800 10000 2800
+Wire Wire Line
+	10450 2900 9550 2900
+Wire Wire Line
+	9550 3000 10000 3000
+Wire Wire Line
+	9550 3100 10450 3100
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BCC46D6
+P 9950 4600
+F 0 "TP?" V 9904 4787 50  0000 L CNN
+F 1 "INTREQ" V 9995 4787 50  0000 L CNN
+F 2 "" H 10150 4600 50  0001 C CNN
+F 3 "~" H 10150 4600 50  0001 C CNN
+	1    9950 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 4600 9950 4600
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BCDE740
+P 5200 5000
+F 0 "TP?" V 5395 5074 50  0000 C CNN
+F 1 "HS/CS" V 5304 5074 50  0000 C CNN
+F 2 "" H 5400 5000 50  0001 C CNN
+F 3 "~" H 5400 5000 50  0001 C CNN
+	1    5200 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD2B53E
+P 5200 5300
+F 0 "TP?" V 5395 5374 50  0000 C CNN
+F 1 "VS/VBLK" V 5304 5374 50  0000 C CNN
+F 2 "" H 5400 5300 50  0001 C CNN
+F 3 "~" H 5400 5300 50  0001 C CNN
+	1    5200 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5BD2B5B6
+P 5200 5600
+F 0 "TP?" V 5395 5674 50  0000 C CNN
+F 1 "AVID" V 5304 5674 50  0000 C CNN
+F 2 "" H 5400 5600 50  0001 C CNN
+F 3 "~" H 5400 5600 50  0001 C CNN
+	1    5200 5600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 3900 5700 3900
+Wire Wire Line
+	5700 3900 5700 5000
+Wire Wire Line
+	5700 5000 5200 5000
+Wire Wire Line
+	6450 4000 5800 4000
+Wire Wire Line
+	5800 4000 5800 5300
+Wire Wire Line
+	5800 5300 5200 5300
+Wire Wire Line
+	6450 4200 5900 4200
+Wire Wire Line
+	5900 4200 5900 5600
+Wire Wire Line
+	5900 5600 5200 5600
 $EndSCHEMATC

@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "LiberPlayer - RS232C Interface"
-Date "2018-10-05"
+Date "2018-10-06"
 Rev "1.0"
 Comp "https://www.domesday86.com"
 Comment1 "(c) 2018 Simon Inns"
@@ -235,9 +235,9 @@ NoConn ~ 2350 4500
 NoConn ~ 2350 4600
 NoConn ~ 2350 4700
 NoConn ~ 2350 4800
-Text HLabel 7350 3700 2    50   Input ~ 0
+Text HLabel 7350 3700 2    50   Output ~ 0
 RS232_RxD
-Text HLabel 7350 3900 2    50   Input ~ 0
+Text HLabel 7350 3900 2    50   Output ~ 0
 RS232_CTS
 Text HLabel 7350 4100 2    50   Input ~ 0
 RS232_TxD
