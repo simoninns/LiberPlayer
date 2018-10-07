@@ -20,7 +20,7 @@ U 1 1 5BB80656
 P 2050 3600
 F 0 "J401" H 2230 3511 50  0000 L CNN
 F 1 "RS232C DCE" H 2230 3602 50  0000 L CNN
-F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 2050 3600 50  0001 C CNN
+F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 2050 3600 50  0001 C CNN
 F 3 " ~" H 2050 3600 50  0001 C CNN
 	1    2050 3600
 	-1   0    0    -1  
@@ -30,7 +30,7 @@ L Interface_UART:MAX3232 U401
 U 1 1 5BB7BD69
 P 6350 3600
 F 0 "U401" H 6350 3750 50  0000 C CNN
-F 1 "MAX3232" H 6350 3650 50  0000 C CNN
+F 1 "MAX3232IDRG4" H 6350 3650 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6400 2550 50  0001 L CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf" H 6350 3700 50  0001 C CNN
 	1    6350 3600

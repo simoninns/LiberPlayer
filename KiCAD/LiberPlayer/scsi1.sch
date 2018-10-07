@@ -509,75 +509,45 @@ U 1 1 5BEA9357
 P 9000 5500
 F 0 "U303" H 8750 5050 50  0000 C CNN
 F 1 "TXS0102DCUT" H 9600 5850 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 9000 4950 50  0001 C CNN
+F 2 "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" H 9000 4950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/txb0102.pdf" H 9000 5470 50  0001 C CNN
 	1    9000 5500
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8300 1300 0    50   BiDi ~ 0
+Text GLabel 8450 2000 0    50   BiDi ~ 0
 SCSI5_~DB0
-Text GLabel 7800 1400 0    50   BiDi ~ 0
+Text GLabel 7950 1900 0    50   BiDi ~ 0
 SCSI5_~DB1
-Text GLabel 8300 1500 0    50   BiDi ~ 0
+Text GLabel 8450 1800 0    50   BiDi ~ 0
 SCSI5_~DB2
-Text GLabel 7800 1600 0    50   BiDi ~ 0
+Text GLabel 7950 1700 0    50   BiDi ~ 0
 SCSI5_~DB3
-Text GLabel 8300 1700 0    50   BiDi ~ 0
+Text GLabel 8450 1600 0    50   BiDi ~ 0
 SCSI5_~DB4
-Text GLabel 7800 1800 0    50   BiDi ~ 0
+Text GLabel 7950 1500 0    50   BiDi ~ 0
 SCSI5_~DB5
-Text GLabel 8300 1900 0    50   BiDi ~ 0
+Text GLabel 8450 1400 0    50   BiDi ~ 0
 SCSI5_~DB6
-Text GLabel 7800 2000 0    50   BiDi ~ 0
+Text GLabel 7950 1300 0    50   BiDi ~ 0
 SCSI5_~DB7
-Text GLabel 8300 3350 0    50   BiDi ~ 0
+Text GLabel 8450 4050 0    50   BiDi ~ 0
 SCSI5_~PARITY
-Text GLabel 7700 3450 0    50   Input ~ 0
+Text GLabel 7850 3950 0    50   Input ~ 0
 SCSI5_~ATN
-Text GLabel 8300 3550 0    50   BiDi ~ 0
+Text GLabel 8450 3850 0    50   BiDi ~ 0
 SCSI5_~BSY
-Text GLabel 7700 3650 0    50   Input ~ 0
+Text GLabel 7850 3750 0    50   Input ~ 0
 SCSI5_~ACK
-Text GLabel 8300 3750 0    50   BiDi ~ 0
+Text GLabel 8450 3650 0    50   BiDi ~ 0
 SCSI5_~RST
-Text GLabel 7700 3850 0    50   Output ~ 0
+Text GLabel 7850 3550 0    50   Output ~ 0
 SCSI5_~MSG
-Text GLabel 8300 3950 0    50   BiDi ~ 0
+Text GLabel 8450 3450 0    50   BiDi ~ 0
 SCSI5_~SEL
 Text GLabel 8350 5400 0    50   Output ~ 0
 SCSI5_~REQ
 Text GLabel 8350 5600 0    50   Output ~ 0
 SCSI5_~I~O
-Wire Wire Line
-	8300 1300 8600 1300
-Wire Wire Line
-	7800 1400 8600 1400
-Wire Wire Line
-	8300 1500 8600 1500
-Wire Wire Line
-	7800 1600 8600 1600
-Wire Wire Line
-	8300 1700 8600 1700
-Wire Wire Line
-	7800 1800 8600 1800
-Wire Wire Line
-	8300 1900 8600 1900
-Wire Wire Line
-	7800 2000 8600 2000
-Wire Wire Line
-	8300 3350 8600 3350
-Wire Wire Line
-	7700 3450 8600 3450
-Wire Wire Line
-	8300 3550 8600 3550
-Wire Wire Line
-	8600 3750 8300 3750
-Wire Wire Line
-	8300 3950 8600 3950
-Wire Wire Line
-	7700 3650 8600 3650
-Wire Wire Line
-	8600 3850 7700 3850
 $Comp
 L power:+5V #PWR0309
 U 1 1 5BF2025D
@@ -868,76 +838,44 @@ Wire Wire Line
 Connection ~ 9500 3250
 Wire Wire Line
 	9500 3250 9500 1200
-Text HLabel 9650 1300 2    50   BiDi ~ 0
-~DB0
-Text HLabel 9650 1400 2    50   BiDi ~ 0
-~DB1
-Text HLabel 9650 1500 2    50   BiDi ~ 0
-~DB2
-Text HLabel 9650 1600 2    50   BiDi ~ 0
-~DB3
-Text HLabel 9650 1700 2    50   BiDi ~ 0
-~DB4
-Text HLabel 9650 1800 2    50   BiDi ~ 0
-~DB5
-Text HLabel 9650 1900 2    50   BiDi ~ 0
-~DB6
 Text HLabel 9650 2000 2    50   BiDi ~ 0
+~DB0
+Text HLabel 9650 1900 2    50   BiDi ~ 0
+~DB1
+Text HLabel 9650 1800 2    50   BiDi ~ 0
+~DB2
+Text HLabel 9650 1700 2    50   BiDi ~ 0
+~DB3
+Text HLabel 9650 1600 2    50   BiDi ~ 0
+~DB4
+Text HLabel 9650 1500 2    50   BiDi ~ 0
+~DB5
+Text HLabel 9650 1400 2    50   BiDi ~ 0
+~DB6
+Text HLabel 9650 1300 2    50   BiDi ~ 0
 ~DB7
-Wire Wire Line
-	9400 1300 9650 1300
-Wire Wire Line
-	9400 1400 9650 1400
-Wire Wire Line
-	9400 1500 9650 1500
-Wire Wire Line
-	9400 1600 9650 1600
-Wire Wire Line
-	9400 1700 9650 1700
-Wire Wire Line
-	9400 1800 9650 1800
-Wire Wire Line
-	9400 1900 9650 1900
-Wire Wire Line
-	9400 2000 9650 2000
-Text HLabel 9650 3350 2    50   BiDi ~ 0
+Text HLabel 9650 4050 2    50   BiDi ~ 0
 ~PARITY
-Text HLabel 9650 3550 2    50   BiDi ~ 0
+Text HLabel 9650 3850 2    50   BiDi ~ 0
 ~BSY
-Text HLabel 9650 3750 2    50   BiDi ~ 0
+Text HLabel 9650 3650 2    50   BiDi ~ 0
 ~RST
-Text HLabel 9650 3950 2    50   BiDi ~ 0
+Text HLabel 9650 3450 2    50   BiDi ~ 0
 ~SEL
-Text HLabel 9650 3450 2    50   Output ~ 0
+Text HLabel 9650 3950 2    50   Output ~ 0
 ~ATN
-Text HLabel 9650 3650 2    50   Output ~ 0
+Text HLabel 9650 3750 2    50   Output ~ 0
 ~ACK
-Text HLabel 9650 3850 2    50   Input ~ 0
+Text HLabel 9650 3550 2    50   Input ~ 0
 ~MSG
 Text HLabel 9700 5400 2    50   Input ~ 0
 ~REQ
 Text HLabel 9700 5600 2    50   Input ~ 0
 ~I~O
 Wire Wire Line
-	9650 3350 9400 3350
-Wire Wire Line
-	9650 3450 9400 3450
-Wire Wire Line
-	9650 3550 9400 3550
-Wire Wire Line
-	9650 3650 9400 3650
-Wire Wire Line
-	9650 3750 9400 3750
-Wire Wire Line
-	9650 3850 9400 3850
-Wire Wire Line
-	9650 3950 9400 3950
-Wire Wire Line
 	9000 6000 9000 6050
-Text GLabel 7700 4050 0    50   Output ~ 0
+Text GLabel 7850 3350 0    50   Output ~ 0
 SCSI5_~C~D
-Wire Wire Line
-	7700 4050 8600 4050
 Wire Wire Line
 	8350 5400 8600 5400
 Wire Wire Line
@@ -958,7 +896,7 @@ L Device:R R301
 U 1 1 5C154C88
 P 10400 1450
 F 0 "R301" H 10470 1496 50  0000 L CNN
-F 1 "R" H 10470 1405 50  0000 L CNN
+F 1 "10K" H 10470 1405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 10330 1450 50  0001 C CNN
 F 3 "~" H 10400 1450 50  0001 C CNN
 	1    10400 1450
@@ -982,8 +920,70 @@ SCSI_OE
 Wire Wire Line
 	10550 1200 10400 1200
 Connection ~ 10400 1200
-Text HLabel 9650 4050 2    50   Input ~ 0
-~C~D
+Wire Wire Line
+	9650 1300 9400 1300
+Wire Wire Line
+	9650 1400 9400 1400
+Wire Wire Line
+	9650 1500 9400 1500
+Wire Wire Line
+	9650 1600 9400 1600
+Wire Wire Line
+	9650 1700 9400 1700
+Wire Wire Line
+	9650 1800 9400 1800
+Wire Wire Line
+	9650 1900 9400 1900
+Wire Wire Line
+	9650 2000 9400 2000
+Wire Wire Line
+	8450 1400 8600 1400
+Wire Wire Line
+	8600 1600 8450 1600
+Wire Wire Line
+	8450 1800 8600 1800
+Wire Wire Line
+	8600 2000 8450 2000
+Wire Wire Line
+	7950 1900 8600 1900
+Wire Wire Line
+	8600 1700 7950 1700
+Wire Wire Line
+	7950 1500 8600 1500
+Wire Wire Line
+	8600 1300 7950 1300
+Wire Wire Line
+	9400 3350 9650 3350
+Wire Wire Line
+	9400 3450 9650 3450
+Wire Wire Line
+	9400 3550 9650 3550
+Wire Wire Line
+	9400 3650 9650 3650
+Wire Wire Line
+	9400 3750 9650 3750
+Wire Wire Line
+	9400 3850 9650 3850
+Wire Wire Line
+	9400 3950 9650 3950
 Wire Wire Line
 	9400 4050 9650 4050
+Text HLabel 9650 3350 2    50   Input ~ 0
+~C~D
+Wire Wire Line
+	7850 3350 8600 3350
+Wire Wire Line
+	8600 3450 8450 3450
+Wire Wire Line
+	7850 3550 8600 3550
+Wire Wire Line
+	8600 3650 8450 3650
+Wire Wire Line
+	7850 3750 8600 3750
+Wire Wire Line
+	8600 3850 8450 3850
+Wire Wire Line
+	7850 3950 8600 3950
+Wire Wire Line
+	8600 4050 8450 4050
 $EndSCHEMATC
