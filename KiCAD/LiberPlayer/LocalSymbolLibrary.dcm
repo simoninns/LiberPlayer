@@ -9,6 +9,10 @@ $CMP MCP23017
 D 16-Bit I/O Expander with I2C Serial Interface
 $ENDCMP
 #
+$CMP MCP23S17
+D 16-Bit I/O Expander with SPI
+$ENDCMP
+#
 $CMP TPS70151PWP
 D Dual-Output Low Dropout Voltage Regulator with Power-Up Sequencing for Split-Voltage DSP Systems
 $ENDCMP
