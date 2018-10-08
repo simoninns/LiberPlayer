@@ -5,6 +5,10 @@ D 6 Pole DIN socket with earth and shield connections
 F https://docs-emea.rs-online.com/webdocs/1579/0900766b81579bcc.pdf
 $ENDCMP
 #
+$CMP MCP23017
+D 16-Bit I/O Expander with I2C Serial Interface
+$ENDCMP
+#
 $CMP TPS70151PWP
 D Dual-Output Low Dropout Voltage Regulator with Power-Up Sequencing for Split-Voltage DSP Systems
 $ENDCMP
