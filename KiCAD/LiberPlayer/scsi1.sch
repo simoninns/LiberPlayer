@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 7
 Title "LiberPlayer - SCSI-1 Interface"
-Date "2018-10-08"
+Date "2018-10-09"
 Rev "1.0"
 Comp "https://www.domesday86.com"
 Comment1 "(c) 2018 Simon Inns"
-Comment2 "License: Attribution-ShareAlike 4.0 International (CC BY-SA 4.)"
+Comment2 "License: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
 Comment3 ""
 Comment4 ""
 $EndDescr
